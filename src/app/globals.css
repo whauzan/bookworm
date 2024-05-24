@@ -2,6 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --background: 0 0% 100%; /* #ffffff */
+    --foreground: 207 19% 28%; /* #3E4E56 */
+    --card: 200 9% 94%; /* #eef2f3 */
+    --card-foreground: 207 19% 28%; /* #3E4E56 */
+    --popover: 200 9% 94%; /* #eef2f3 */
+    --popover-foreground: 207 19% 28%; /* #3E4E56 */
+    --primary: 8 82% 64%; /* #FF6F61 */
+    --primary-foreground: 0 0% 93%; /* #EDEDED */
+    --secondary: 35 100% 84%; /* #ffe4c9 */
+    --secondary-foreground: 28 23% 55%; /* #A68A75 */
+    --muted: 30 20% 93%; /* #f3eee8 */
+    --muted-foreground: 210 7% 45%; /* #6C757D */
+    --accent: 15 31% 93%; /* #f4e9e5 */
+    --accent-foreground: 28 23% 55%; /* #A68A75 */
+    --destructive: 0 84% 60%; /* #E74C3C */
+    --destructive-foreground: 0 0% 93%; /* #EDEDED */
+    --border: 15 31% 93%; /* #f4e9e5 */
+    --input: 15 31% 93%; /* #f4e9e5 */
+    --ring: 8 82% 64%; /* #FF6F61 */
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 0%; /* #000000 */
+    --foreground: 0 0% 93%; /* #EDEDED */
+    --card: 210 4% 18%; /* #2B2D2F */
+    --card-foreground: 0 0% 93%; /* #EDEDED */
+    --popover: 210 4% 18%; /* #2B2D2F */
+    --popover-foreground: 0 0% 93%; /* #EDEDED */
+    --primary: 16 100% 70%; /* #FFA07A */
+    --primary-foreground: 0 0% 93%; /* #EDEDED */
+    --secondary: 210 6% 26%; /* #404345 */
+    --secondary-foreground: 28 23% 55%; /* #A68A75 */
+    --muted: 210 6% 26%; /* #404345 */
+    --muted-foreground: 0 0% 69%; /* #B0B0B0 */
+    --accent: 210 6% 26%; /* #404345 */
+    --accent-foreground: 28 23% 55%; /* #A68A75 */
+    --destructive: 8 100% 67%; /* #FF6F61 */
+    --destructive-foreground: 0 0% 93%; /* #EDEDED */
+    --border: 210 5% 47%; /* #6C757D */
+    --input: 210 5% 47%; /* #6C757D */
+    --ring: 16 100% 70%; /* #FFA07A */
+    --radius: 0.5rem;
+  }
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -13,21 +61,5 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
   }
 }
